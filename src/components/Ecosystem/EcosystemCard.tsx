@@ -7,8 +7,9 @@ import type { EcosystemApp } from './EcosystemBlocks';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useTweetMetrics } from '@site/src/api/GetTwitterMetrics';
 import { BsHeart } from 'react-icons/bs';
-import { formatTwitterCount } from '@site/src/utils/FormatTwitterCount'
+import { formatTwitterCount } from '@site/src/utils/FormatTwitterCount';
 import Link from '@docusaurus/Link';
+import Starsvg from '@site/static/assets/ecosystem/star.svg';
 
 const EcosystemCard: React.FC<{ app: EcosystemApp }> = ({ app }) => {
   const { data: twitterData } = useTweetMetrics(app.twitterId || '');
@@ -25,7 +26,14 @@ const EcosystemCard: React.FC<{ app: EcosystemApp }> = ({ app }) => {
       aria-label={app.name}
       title={app.name}
       $comingsoon={app.comingsoon}
+      appoftheweek={app.appoftheweek}
     >
+      {app.appoftheweek && (
+        <CardTag>
+          <Starsvg />
+          <Span>APP OF THE WEEK</Span>
+        </CardTag>
+      )}
       <BackgroundWrapper>
         <Background
           style={{
@@ -55,19 +63,19 @@ const EcosystemCard: React.FC<{ app: EcosystemApp }> = ({ app }) => {
             ))}
           </Tags>
           {app?.twitterId && (
-              <Likes
-                href={`https://x.com/PushChain/status/${app.twitterId}`}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Tag tagsColor={app?.tagsColor}>
-                  {formatTwitterCount(twitterData?.like_count)}
-                </Tag>
-                <BsHeart
-                  size={22}
-                  color={app?.tagsColor || `var(--ifm-ecosystem-tags-color)`}
-                />
-              </Likes>
+            <Likes
+              href={`https://x.com/PushChain/status/${app.twitterId}`}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Tag tagsColor={app?.tagsColor}>
+                {formatTwitterCount(twitterData?.like_count)}
+              </Tag>
+              <BsHeart
+                size={22}
+                color={app?.tagsColor || `var(--ifm-ecosystem-tags-color)`}
+              />
+            </Likes>
           )}
         </Meta>
       </ContentWrap>
@@ -82,7 +90,7 @@ const EcosystemCard: React.FC<{ app: EcosystemApp }> = ({ app }) => {
 
 export default EcosystemCard;
 
-const Card = styled.a<{ $comingsoon?: boolean }>`
+const Card = styled.a<{ $comingsoon?: boolean; appoftheweek?: boolean }>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -92,7 +100,11 @@ const Card = styled.a<{ $comingsoon?: boolean }>`
   text-decoration: none;
   color: var(--ifm-color-white);
   border: ${(props) =>
-    props.$comingsoon ? 'none' : '1px solid rgba(171, 70, 248, 0.4);'};
+    props.$comingsoon
+      ? 'none'
+      : props.appoftheweek
+        ? '1px solid #EF46F8'
+        : '1px solid rgba(171, 70, 248, 0.4)'};
   height: 426px;
   transition:
     transform 0.2s ease,
@@ -120,6 +132,31 @@ const Card = styled.a<{ $comingsoon?: boolean }>`
     &::before {
       opacity: ${(props) => (props.$comingsoon ? 0 : 1)};
     }
+  }
+`;
+
+const CardTag = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999999;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #000;
+  height: 28px;
+  padding: 4px 12px;
+  gap: 4px;
+
+  span {
+    color: var(--ifm-color-white);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
   }
 `;
 
