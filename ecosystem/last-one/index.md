@@ -12,4 +12,5 @@ titleColor: black
 descriptionColor: black
 tagsColor: black
 appoftheweek: true
+spotlighttext: Last bid wins it all!
 ---

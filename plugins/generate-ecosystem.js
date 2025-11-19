@@ -4,7 +4,10 @@ const matter = require('gray-matter');
 
 const ecosystemDir = path.join(__dirname, '../ecosystem');
 const outputFile = path.join(__dirname, '../src/config/EcosystemAppsList.ts');
-const appOfTheWeekFile = path.join(__dirname, '../static/content/appoftheweek.json');
+const appOfTheWeekFile = path.join(
+  __dirname,
+  '../static/content/appoftheweek.json'
+);
 const publicAssetsDir = path.join(__dirname, '../static/assets/ecosystem');
 
 // Ensure public assets directory exists
@@ -111,5 +114,9 @@ if (appOfTheWeek) {
   fs.writeFileSync(appOfTheWeekFile, JSON.stringify(appOfTheWeek, null, 2));
   console.log('✅ Generated appoftheweek.json with app:', appOfTheWeek.name);
 } else {
-  console.log('⚠️  No app marked as appoftheweek');
+  // Write empty object if no app of the week
+  fs.writeFileSync(appOfTheWeekFile, JSON.stringify({}, null, 2));
+  console.log(
+    '⚠️  No app marked as appoftheweek - created empty appoftheweek.json'
+  );
 }

@@ -14,6 +14,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     descriptionColor: 'black',
     tagsColor: 'black',
     appoftheweek: true,
+    spotlighttext: 'Last bid wins it all!',
   },
   {
     id: 2,
