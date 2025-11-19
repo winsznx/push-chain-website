@@ -13,6 +13,8 @@ export const EcosystemAppsList: EcosystemApp[] = [
     titleColor: 'black',
     descriptionColor: 'black',
     tagsColor: 'black',
+    appoftheweek: true,
+    spotlighttext: 'Last bid wins it all!',
   },
   {
     id: 2,
@@ -150,7 +152,8 @@ export const EcosystemAppsList: EcosystemApp[] = [
   {
     id: 13,
     name: 'Forge Realm',
-    description: 'Mix and match base characters and traits from multiple creators',
+    description:
+      'Mix and match base characters and traits from multiple creators',
     icon: '/assets/ecosystem/forge-realm-icon.png',
     bgImage: '/assets/ecosystem/forge-realm-bg.png',
     bgGradientColor: '#000000',

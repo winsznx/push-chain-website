@@ -4,6 +4,10 @@ const matter = require('gray-matter');
 
 const ecosystemDir = path.join(__dirname, '../ecosystem');
 const outputFile = path.join(__dirname, '../src/config/EcosystemAppsList.ts');
+const appOfTheWeekFile = path.join(
+  __dirname,
+  '../static/content/appoftheweek.json'
+);
 const publicAssetsDir = path.join(__dirname, '../static/assets/ecosystem');
 
 // Ensure public assets directory exists
@@ -11,7 +15,14 @@ if (!fs.existsSync(publicAssetsDir)) {
   fs.mkdirSync(publicAssetsDir, { recursive: true });
 }
 
+// Ensure static/content directory exists
+const contentDir = path.join(__dirname, '../static/content');
+if (!fs.existsSync(contentDir)) {
+  fs.mkdirSync(contentDir, { recursive: true });
+}
+
 const apps = [];
+let appOfTheWeek = null;
 const folders = fs.readdirSync(ecosystemDir);
 
 folders.forEach((folder) => {
@@ -54,12 +65,21 @@ folders.forEach((folder) => {
       }
     }
 
+    // Check if this is the app of the week
+    if (data.appoftheweek) {
+      appOfTheWeek = data;
+    }
+
     apps.push(data);
   }
 });
 
-// Sort apps by id (ascending order)
-apps.sort((a, b) => (a.id || 999) - (b.id || 999));
+// Sort apps: appoftheweek first, then by id (ascending order)
+apps.sort((a, b) => {
+  if (a.appoftheweek && !b.appoftheweek) return -1;
+  if (!a.appoftheweek && b.appoftheweek) return 1;
+  return (a.id || 999) - (b.id || 999);
+});
 
 // Custom JSON stringify with single quotes
 const formatAppsList = (apps) => {
@@ -88,3 +108,15 @@ ${formatAppsList(apps)},
 
 fs.writeFileSync(outputFile, output);
 console.log('✅ Generated EcosystemAppsList.ts with', apps.length, 'apps');
+
+// Generate App of the Week JSON file
+if (appOfTheWeek) {
+  fs.writeFileSync(appOfTheWeekFile, JSON.stringify(appOfTheWeek, null, 2));
+  console.log('✅ Generated appoftheweek.json with app:', appOfTheWeek.name);
+} else {
+  // Write empty object if no app of the week
+  fs.writeFileSync(appOfTheWeekFile, JSON.stringify({}, null, 2));
+  console.log(
+    '⚠️  No app marked as appoftheweek - created empty appoftheweek.json'
+  );
+}

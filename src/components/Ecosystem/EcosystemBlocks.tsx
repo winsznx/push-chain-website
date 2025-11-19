@@ -22,6 +22,8 @@ export type EcosystemApp = {
   descriptionColor?: string;
   tagsColor?: string;
   comingsoon?: boolean;
+  appoftheweek?: true;
+  spotlighttext?: string;
 };
 
 type Props = {
