@@ -31,7 +31,7 @@ const EcosystemCard: React.FC<{ app: EcosystemApp }> = ({ app }) => {
       {app.appoftheweek && (
         <CardTag>
           <Starsvg />
-          <Span>APP OF THE WEEK</Span>
+          <Span>APP SPOTLIGHT</Span>
         </CardTag>
       )}
       <BackgroundWrapper>
