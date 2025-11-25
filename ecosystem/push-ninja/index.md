@@ -8,6 +8,6 @@ bgGradientColor: '#591D5C'
 tags:
   - Gaming
 twitterId: '1989664523339665658'
-href: https://push-ninja.vercel.app/
+href: https://push-ninja.abstractstudio.in
 titleColor: white
 ---
