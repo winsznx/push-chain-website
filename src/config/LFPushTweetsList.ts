@@ -37,6 +37,7 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/Psu353/status/1988309812598513810?s=20',
   'https://x.com/0xsakshamtyagi/status/1988349341480951828?s=20',
   'https://x.com/PranshuWeb3/status/1988477194755338364?s=20',
+  'https://x.com/hyderabaddao/status/1988272895987253657?s=20',
 
   // Till 24th Nov
   'https://x.com/techtusharojha/status/1988959987344031886?s=20',
