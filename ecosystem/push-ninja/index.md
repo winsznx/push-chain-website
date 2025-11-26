@@ -1,5 +1,5 @@
 ---
-id: 6
+id: 9
 name: Push Ninja
 description: On-chain skill based game
 icon: icon.png

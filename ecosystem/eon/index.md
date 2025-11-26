@@ -1,5 +1,5 @@
 ---
-id: 10
+id: 14
 name: 'EON: AI Butler'
 description: Send, swap, and manage assets across supported networks
 icon: icon.png
