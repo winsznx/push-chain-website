@@ -1,5 +1,5 @@
 ---
-id: 16
+id: 20
 name: PNS
 description: Your Identity Across Every Chain
 icon: icon.png

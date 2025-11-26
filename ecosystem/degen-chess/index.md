@@ -1,5 +1,5 @@
 ---
-id: 18
+id: 22
 name: Degen Chess
 description: Play chess, wager, universal
 icon: icon.png
