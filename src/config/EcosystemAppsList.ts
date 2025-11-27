@@ -81,7 +81,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     bgImage: '/assets/ecosystem/push402-bg.png',
     bgGradientColor: '#010101',
     tags: ['Infra'],
-    href: 'pushindexer.vercel.app',
+    href: 'https://pushindexer.vercel.app',
     titleColor: 'white',
   },
   {
