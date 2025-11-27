@@ -7,6 +7,6 @@ bgImage: bg.png
 bgGradientColor: '#010101'
 tags:
   - Infra
-href: pushindexer.vercel.app
+href: https://pushindexer.vercel.app
 titleColor: white
 ---
