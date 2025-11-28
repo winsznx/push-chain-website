@@ -12,6 +12,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     href: 'https://www.lastone.fun/',
     titleColor: 'black',
     descriptionColor: 'black',
+    twitterId: '1993681001076478131',
     tagsColor: 'black',
     appoftheweek: true,
     spotlighttext: 'Last bid wins it all!',
