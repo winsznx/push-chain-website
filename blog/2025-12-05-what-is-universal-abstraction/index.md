@@ -55,7 +55,7 @@ Swap Arbitrum for Polygon, Solana, Base, Whatever. Same friction, new native tok
 
 **Every new chain \= new gas token \= new friction.**
 
-Even Industry greats like Austin Griffith call this torture out \[ LINK TWEET \- [https://x.com/austingriffith/status/1985438645130838068](https://x.com/austingriffith/status/1985438645130838068)\]
+Even Industry greats like Austin Griffith call this torture out [TWEET](https://x.com/austingriffith/status/1985438645130838068)
 
 ![What is Universal Fee Abstraction?](./image-1.webp)
 
