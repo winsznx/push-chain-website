@@ -10,4 +10,6 @@ tags:
 twitterId: '1989664475784663041'
 href: https://www.thehodl.fun/
 titleColor: white
+appoftheweek: true
+spotlighttext: Making token launches universal!
 ---

@@ -2,6 +2,20 @@ import { EcosystemApp } from '@site/src/components/Ecosystem/EcosystemBlocks';
 
 export const EcosystemAppsList: EcosystemApp[] = [
   {
+    id: 3,
+    name: 'Hodl.fun',
+    description: 'Create & launch ERC-20 tokens',
+    icon: '/assets/ecosystem/hodl-fun-icon.png',
+    bgImage: '/assets/ecosystem/hodl-fun-bg.png',
+    bgGradientColor: 'rgba(0, 0, 0, 0.80)',
+    tags: ['DeFi'],
+    twitterId: '1989664475784663041',
+    href: 'https://www.thehodl.fun/',
+    titleColor: 'white',
+    appoftheweek: true,
+    spotlighttext: 'Making token launches universal!',
+  },
+  {
     id: 1,
     name: 'Last One',
     description: 'Last one to bid before timer runs out takes the pot',
@@ -14,8 +28,6 @@ export const EcosystemAppsList: EcosystemApp[] = [
     descriptionColor: 'black',
     twitterId: '1993681001076478131',
     tagsColor: 'black',
-    appoftheweek: true,
-    spotlighttext: 'Last bid wins it all!',
   },
   {
     id: 2,
@@ -26,18 +38,6 @@ export const EcosystemAppsList: EcosystemApp[] = [
     bgGradientColor: 'rgba(0, 0, 0, 0.80)',
     tags: ['Gaming'],
     href: 'https://ballsy.push.org/',
-    titleColor: 'white',
-  },
-  {
-    id: 3,
-    name: 'Hodl.fun',
-    description: 'Create & launch ERC-20 tokens',
-    icon: '/assets/ecosystem/hodl-fun-icon.png',
-    bgImage: '/assets/ecosystem/hodl-fun-bg.png',
-    bgGradientColor: 'rgba(0, 0, 0, 0.80)',
-    tags: ['DeFi'],
-    twitterId: '1989664475784663041',
-    href: 'https://www.thehodl.fun/',
     titleColor: 'white',
   },
   {
@@ -197,8 +197,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
   {
     id: 17,
     name: 'Forge Realm',
-    description:
-      'Mix and match base characters and traits from multiple creators',
+    description: 'Mix and match base characters and traits from multiple creators',
     icon: '/assets/ecosystem/forge-realm-icon.png',
     bgImage: '/assets/ecosystem/forge-realm-bg.png',
     bgGradientColor: '#000000',
