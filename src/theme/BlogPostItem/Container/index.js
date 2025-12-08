@@ -24,6 +24,7 @@ export default function BlogPostItemContainer({ children, className }) {
       itemProp='blogPost'
       itemScope
       itemType='https://schema.org/BlogPosting'
+      style={{ width: 'calc(100vw - 32px)' }}
     >
       {description && <meta itemProp='description' content={description} />}
       {image && (
