@@ -28,6 +28,15 @@ export const KBDeepDivesList = {
       variant: 'row',
       items: [
         {
+          slug: 'what-is-universal-fee-abstraction',
+          image:
+            '/static/assets/website/chain/knowledge/what-is-fee-abstraction',
+          imageSrcSet: false,
+          title: 'What is Universal Fee Abstraction and How do they work?',
+          url: '/blog/what-is-universal-abstraction',
+          target: '_blank',
+        },
+        {
           slug: 'what-are-universal-executor-accounts',
           image:
             '/static/assets/website/chain/knowledge/what-are-executor-accounts',
