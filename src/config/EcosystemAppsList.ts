@@ -12,6 +12,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     href: 'https://zns.bio/gm-deploy?filter=all&tab=gm&search=push',
     titleColor: 'black',
     descriptionColor: 'black',
+    twitterId: '1998756795859550371',
     appoftheweek: true,
     spotlighttext: 'Universal identity layer',
   },
