@@ -1,16 +1,16 @@
 {
-  "id": 3,
-  "name": "Hodl.fun",
-  "description": "Create & launch ERC-20 tokens",
-  "icon": "/assets/ecosystem/hodl-fun-icon.png",
-  "bgImage": "/assets/ecosystem/hodl-fun-bg.png",
-  "bgGradientColor": "rgba(0, 0, 0, 0.80)",
+  "id": 24,
+  "name": "ZNS",
+  "description": "Multi-chain domains, GM + Deploy tools",
+  "icon": "/assets/ecosystem/zns-icon.png",
+  "bgImage": "/assets/ecosystem/zns-bg.png",
+  "bgGradientColor": "#A9D20A",
   "tags": [
-    "DeFi"
+    "Infra"
   ],
-  "twitterId": "1989664475784663041",
-  "href": "https://www.thehodl.fun/",
-  "titleColor": "white",
+  "href": "https://zns.bio/gm-deploy?filter=all&tab=gm&search=push",
+  "titleColor": "black",
+  "descriptionColor": "black",
   "appoftheweek": true,
-  "spotlighttext": "Making token launches universal!"
+  "spotlighttext": "Universal identity layer"
 }
